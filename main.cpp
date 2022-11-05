@@ -55,7 +55,14 @@ int main(){
             //call liquif function
         }
         else if (userInput == "f"){
-            //idk
+            cout<<"The following items are not recyclable:\n"; 
+            cout<<"1. Soiled container \n2. Shipping Package \n3. Plastic Films"; 
+            cout<<"\n4. Batteries \n5. Snack Bags (chip, cookie, granola bar wrappers \n6. Food and beverage foam containers \n7. Multi Layered Food Containers";
+            cout<<"\n8. Electrical Cords \n9. Hoses \n10. Hangers\n\n"; 
+
+            cout<<"The following are hazardous wastes, make sure to despode of them at a Drop-Off Location
+for Household Hazardous Waste:\n"; 
+            cout<<"Medical sharps and medications\n Batteries (including car batteries) \nLight bulbs and fluorescent tubes \nNonempty aerosol cans (paints, solvents, butane) \nHousehold Chemicals: flammables and poisons, pool chemicals and acid cleaners, pesticides and herbicides. \nAsbestos"
         }
 
 
