@@ -48,3 +48,46 @@ int main(){
     return 0;
 }
 
+void metal(){
+    string input;
+
+    cout << "Nice, so you are recycling metal. Do you have cans or metal containers? Answer 'y' or 'n'" << endl;
+    cin >> input;
+    cout << endl;
+
+    if (input == "Y" || input == "y"){
+        string canInput;
+        cout << "Are your cans and containers aluminum? Answer 'y' or 'n'" << endl;
+        cin >> canInput;
+
+        if (canInput == "Y" || canInput == "y"){
+            cout << "Great, these are recyclable." << endl;
+        }
+        else if (canInput == "N" || canInput == "n"){
+            cout << "Some metal cans, containers, and bottles are recyclable. They are also eligible for CRV redemption at the recycling center, so you can get some extra change." << endl;
+        }
+        else {
+            cout << "Invalid Input" << endl;
+        } 
+
+    }
+    else if (input == "N" || input == "n"){
+        string electronicInput;
+        cout << "Cool, you probably have some sort of electronic waste. Do you have simple electronic waste? Answer 'y' or 'n'" << endl;
+        cin >> electronicInput;
+
+        if (electronicInput == "Y" || electronicInput == "y"){
+            cout << "This contains: Computer and Television Monitors, Computers, Printers, VCRs, Cell Phones, Radios, and Microwaves. "
+            << "These are recyclable and can be taken to a collection site." << endl;
+        }
+        else if (electronicInput == "N" || electronicInput == "n"){
+            cout << "This includes: Batteries and Electrical cords. These are not recyclable, you are better off throwing them away." << endl;
+        }
+        else {
+            cout << "Invalid Input" << endl;
+        } 
+    }
+    else {
+        cout << "Most metal objects are recyclable. If you have more questions, make sure to make sure to research where you can dispose your waste." << endl;
+    }
+}
