@@ -7,6 +7,7 @@ using namespace std;
 void cardboard();
 void metal();
 void liquid();
+void paper();
 
 
 int main(){
@@ -137,4 +138,46 @@ void cardboard(){
 
 void liquid(){
     cout << "While liquids are not typically recyclabe, you are able to take used oils/filters, and paint to a collection center." << endl;
+}
+
+void paper(){
+    string input; 
+
+    cout<<"Is your paper shredded (y/n)?\n";
+    cin<<input; 
+    cout<<endl;
+
+    if (input == "y"){
+        cout<<"Throw it away! Often there are pieces of plastic mixed in with shredded paper, preventing it from being processed. \n"; 
+        return; 
+    }
+
+    cout<<"Is your paper coated with plastic (y/n)?\n";
+    cin<<input; 
+    cout<<endl;
+
+    if (input == "y"){
+        cout<<"Throw it away! The paper cannot be separated easily from the plastic lining. \n"; 
+        return; 
+    }
+
+    cout<<"Is your paper a receipt (y/n)?\n";
+    cin<<input; 
+    cout<<endl;
+
+    if (input == "y"){
+        cout<<"Throw it away! Most receipts are made from a combination of plastic and paper, and they also contain a harmful chemical called bisphenol-A (BPA). \n"; 
+        return; 
+    }
+
+    cout<<"Is your paper contaminated with food or liquids (y/n)?\n";
+    cin<<input; 
+    cout<<endl;
+
+    if (input == "y"){
+        cout<<"Throw it away! It can't be processed for recycling.\n"; 
+        return; 
+    }
+
+    cout<<"Recycle your paper!\n"
 }
