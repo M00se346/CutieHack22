@@ -5,6 +5,8 @@ using namespace std;
 
 
 void cardboard();
+void metal();
+void liquid();
 
 
 int main(){
@@ -131,4 +133,8 @@ void cardboard(){
         }
     }
 
+}
+
+void liquid(){
+    cout << "While liquids are not typically recyclabe, you are able to take used oils/filters, and paint to a collection center." << endl;
 }
