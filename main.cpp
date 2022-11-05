@@ -113,7 +113,8 @@ void metal(){
         } 
     }
     else {
-        cout << "Most metal objects are recyclable. If you have more questions, make sure to make sure to research where you can dispose your waste." << endl;
+        cout << "Most metal objects are recyclable. If you have more questions, make sure to make sure to research where you can dispose your waste." 
+        << "If you have other objects such as tin foil with food residue or hangers, then those are not recyclable. Those objects should be thrown away." << endl;
     }
 }
 
