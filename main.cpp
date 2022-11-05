@@ -146,7 +146,7 @@ void cardboard(){
          << "You are able to recycle pizza boxes ONLY IF they don't have grease on them. \n";
 
     cout << "Otherwise, cardboard comes in many shapes and sizes, but almost all of it is recyclable!" << endl;
-    cout << "As long as the cardboard is dry (no liquid or grease on it) you should be able to recycle it\n";
+    cout << "As long as the cardboard is dry (no liquid or grease on it) you should be able to recycle it.\n";
     
 }
 
@@ -335,7 +335,7 @@ void glass(){
         return; 
     }
 
-    cout << "The only recyclable glass types are jars and bottles! \n";
+    cout << "The only recyclable glass types are jars and bottles! \n You should be okay to recycle your item. \n";
 
 
 }
