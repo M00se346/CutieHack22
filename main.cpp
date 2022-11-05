@@ -9,6 +9,7 @@ void plastic();
 void metal();
 void liquid();
 void paper();
+void glass();
 
 
 int main(){
@@ -48,7 +49,7 @@ int main(){
             paper();
         }
         else if (userInput == "d"){
-            //glass();
+            glass();
         }
         else if (userInput == "e"){
             liquid();
@@ -277,4 +278,64 @@ void paper(){
     }
 
     cout<<"Recycle your paper!\n";
+}
+
+
+void glass(){
+
+    string input;
+
+    cout << "Is your glass dishwear (broken plate or bowl?) (y/n)?\n";
+    cin >> input; 
+    cout << endl;
+
+    if (input == "y" || input == "Y"){
+        cout << "The only recyclable glass types are jars and bottles! \n";
+        cout<<"Throw it away! \n"; 
+        return; 
+    }
+
+    cout << "Is your glass a mirror (y/n)?\n";
+    cin >> input; 
+    cout << endl;
+
+    if (input == "y" || input == "Y"){
+        cout << "The only recyclable glass types are jars and bottles! \n";
+        cout<<"Throw it away! \n"; 
+        return; 
+    }
+
+    cout << "Is your item some sort of pottery or ceramic (y/n)?\n";
+    cin >> input; 
+    cout << endl;
+
+    if (input == "y" || input == "Y"){
+        cout << "The only recyclable glass types are jars and bottles! \n";
+        cout<<"Throw it away! \n"; 
+        return; 
+    }
+
+    cout << "Is your item a lightbulb (y/n)?\n";
+    cin >> input; 
+    cout << endl;
+
+    if (input == "y" || input == "Y"){
+        cout << "The only recyclable glass types are jars and bottles! \n";
+        cout<<"Throw it away! \n"; 
+        return; 
+    }
+
+    cout << "Is your item a flower vase (y/n)?\n";
+    cin >> input; 
+    cout << endl;
+
+    if (input == "y" || input == "Y"){
+        cout << "The only recyclable glass types are jars and bottles! \n";
+        cout<<"Throw it away! \n"; 
+        return; 
+    }
+
+    cout << "The only recyclable glass types are jars and bottles! \n";
+
+
 }
