@@ -95,6 +95,8 @@ void metal(){
         string canInput;
 
         cout << "Did your cans and containers hold any toxic waste such as uranium, lead, or mercury?  Answer 'y' or 'n'" << endl;
+        cin >> canInput;
+        cout << endl;
         if (canInput == "Y" || canInput == "y"){ 
             cout << "When waste contains such material, it is better off to be thrown to the hazardous waste drop-off center." << endl;
             cout << "This could include paint cans, motor oil cans, propane gas tanks, certain vehicule parts and older computer parts." << endl;
@@ -102,7 +104,7 @@ void metal(){
         else if (canInput == "N" || canInput == "n"){
             cout << "Are your cans and containers aluminum? Answer 'y' or 'n'" << endl;
             cin >> canInput;
-
+            cout << endl;
             if (canInput == "Y" || canInput == "y"){
                 cout << "Great, these are recyclable. Just make sure that it is cleaned and it should be good to go." << endl;
             }
@@ -118,17 +120,17 @@ void metal(){
     else if (input == "N" || input == "n"){
         string electronicInput;
         cout << "Cool, is your waste some sort of electronic waste. Answer 'y' or 'n'" << endl;
-        cin >> electronicInput;
+        cout << "This includes: \n1. Computer and Television Monitors \n2.Computers \n3.Printers \n4.VCRs \n5.Cell Phones \n6.Radios \n7.Microwaves. \n" ;
 
+        cin >> electronicInput;
+        cout << endl;
         if (electronicInput == "Y" || electronicInput == "y"){ 
-            cout << "Can you take your objet to the recyclabe center? Answer 'y' or 'n'" << endl;
-            if (electronicInput == "Y" || electronicInput == "y"){
-                cout << "This includes: Computer and Television Monitors, Computers, Printers, VCRs, Cell Phones, Radios, and Microwaves. "
-                << "These are recyclable and can be taken to a collection site." << endl;
-            }  
+            cout << "Take your objet to the recycling center or the nearest electronic waste drop off." << endl;
+            
         }
         else if (electronicInput == "N" || electronicInput == "n"){
-                cout << "This includes: Batteries and Electrical cords. These are not recyclable, you are better off throwing them away." << endl;
+                cout << "Your item is not recyclable, you are better off throwing them away." << endl;
+                cout << "This may include: Batteries and Electrical cords. \n";
             }
             else {
                 cout << "Invalid Input" << endl;
