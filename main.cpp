@@ -8,6 +8,7 @@ void cardboard();
 void plastic();
 void metal();
 void liquid();
+void paper();
 
 
 int main(){
@@ -25,7 +26,7 @@ int main(){
 
     if (userInput == "Y" || userInput == "y"){
         cout << "Great start! Ok, lets look further" << endl;
-        //call plastic function
+        plastic();
     }
     else{
         cout << "Ok, lets see. Are you holding a.cardboard b.metal c.paper d.glass e.liquid"
@@ -44,7 +45,7 @@ int main(){
             metal();
         }
         else if (userInput == "c"){
-            //paper();
+            paper();
         }
         else if (userInput == "d"){
             //glass();
@@ -58,6 +59,18 @@ int main(){
             << endl;
             cout << "If you are still unsure go to your local recycling center and ask for help."
             << endl;
+
+            cout<<"The following items are not recyclable:\n"; 
+            cout<<"1. Soiled container \n2. Shipping Package \n3. Plastic Films"; 
+            cout<<"\n4. Batteries \n5. Snack Bags (chip, cookie, granola bar wrappers) \n6. "
+                << "Food and beverage foam containers \n7. Multi Layered Food Containers";
+            cout<<"\n8. Electrical Cords \n9. Hoses \n10. Hangers\n\n"; 
+
+            cout << "The following are hazardous wastes, make sure to despode of them at a "
+                 << "Drop-Off Location for Household Hazardous Waste:\n" ; 
+            cout<< "1. Medical sharps and medications\n2. Batteries (including car batteries) "
+                << "\n3. Light bulbs and fluorescent tubes \n4. Nonempty aerosol cans (paints, solvents, "
+                << "butane) \n5. Household Chemicals: flammables and poisons, pool chemicals and acid cleaners, pesticides and herbicides. \n6. Asbestos \n";
         }
 
 
@@ -110,45 +123,26 @@ void metal(){
         } 
     }
     else {
-        cout << "Most metal objects are recyclable. If you have more questions, make sure to make sure to research where you can dispose your waste." << endl;
+        cout << "Most metal objects are recyclable. If you have more questions, make sure to make sure to research where you can dispose your waste." 
+        << "If you have other objects such as tin foil with food residue or hangers, then those are not recyclable. Those objects should be thrown away." << endl;
     }
 }
 
 void cardboard(){
 
-    string input;
+    cout << "Are you holding a pizza box?!?! "
+         << "You are able to recycle pizza boxes ONLY IF they don't have grease on them. \n";
 
-    cout << "Cardboard comes in many shapes and sizes, lets see what you have." << endl
-    << "Are you holding a cereal box? Y/N" << endl;
-    cin >> input;
-    cout << endl;
-    if (input == "Y" || input == "y"){
-        cout << "Great! cereal boxes are absolutely recyclable."
-        << " Make sure to unfold the box and keep it flat, then" 
-        << "go ahead and put in in your recycling bin" << endl;
-    }
-    else{   
-        cout << "Are you holding a shipping conatiner? Y/N" << endl;
-        cin >> input;
-        cout << endl;
-        if(input == "Y" || input == "y"){
-            cout << "Great! You can recycle that. Make sure there"
-            << "is no wax coating or metal lining (if there is, throw it away)." << endl;
-        }
-        else{
-            cout << "Are you holding a pizza box?!?! "
-            << "You are able to recycle pizza boxes ONLY IF they don't have grease on them. "
-            << "Otherwise, please throw away your item, it is not recyclable." << endl;
-             
-        }
-    }
-
+    cout << "Otherwise, cardboard comes in many shapes and sizes, but almost all of it is recyclable!" << endl;
+    cout << "As long as the cardboard is dry (no liquid or grease on it) you should be able to recycle it\n";
+    
 }
 
 
 void liquid(){
     cout << "While liquids are not typically recyclabe, you are able to "
     << "take used oils/filters, and paint to a collection center." << endl;
+   
 }
 
 void plastic(){
@@ -161,40 +155,115 @@ void plastic(){
     cout << "Don't have these things?" 
     << "Lets see... do you have empty house hold containers" 
     << "(clorox wipes bottle, laundry detergent jug etc... (Y/N)" << endl;
-
     cin >> input;
     cout << endl;
 
     if (input == "Y" || input == "y"){
         cout << "You can recycle this! Make sure to wash out any chemicals with water before recycling." << endl;
+        return;
     }
-    else{
-        cout << "Do you have a plastic bag in your hand?" << endl;
-        cin >> input;
+    
+    cout << "Do you have small plastic?" << endl;
+    cout << "Examples: \n1. plastic utensils \n2. plastic straw \n3. bread clip \n4. tampon applictor \n5. chapstick \n";
+    cin >> input;
+    cout << endl;
+    if (input == "Y" || input == "y"){
+        cout << "These are trash items, small plastics are some of the biggest contributers to "
+        << "ocean pollution, next time, try to reuse what you can!\n";
+        return;
+    }
+
+    cout << "Do you have a plastic bag / trash bag in your hand?" << endl;
+    cin >> input;
+    cout << endl;
+
+    if (input == "Y" || input == "y"){
+        cout << "I recommend resuing plastic bags. These can be used when "
+        << "shopping so you don't have to buy new bags. Another use for plastic "
+        << "bags is to line the inside of trash cans. " << endl;
+        cout << "Otherwise, check your local recycling center to see if they accept plastic bags." << endl;
+        cout << endl << endl;
+        cout << "If you have a trash bag thats empty, check with your local recycling center. ";
         cout << endl;
-
-        if (input == "Y" || input == "y"){
-            cout << "I recommend resuing plastic bags. These can be used when "
-            << "shopping so you don't have to buy new bags. Another use for plastic "
-            << "bags is to line the inside of trash cans. " << endl;
-            cout << "Otherwise, check your local recycling center to see if they accept plastic bags." << endl;
-            cout << endl << endl;
-            cout << "If you have a trash bag thats empty, check with your local recycling center. ";
-            cout << endl;
-        }   
-        else{
-            cout << "Do you have cling wrap? (Y/N)" << endl;
-            cin >> input;
-            cout << endl;
-            if (input == "Y" || input == "y"){
-                cout << "cling wrap is not recyclable, you should throw it in the trash." << endl;
-            }
-            else{
-                cout << "You are holding trash! Go ahead and throw it away." << endl;
-            }
-        }
-
-
+        return;
+    }   
+        
+    cout << "Do you have cling wrap? (Y/N)" << endl;
+    cin >> input;
+    cout << endl;
+    if (input == "Y" || input == "y"){
+        cout << "cling wrap is not recyclable, you should throw it in the trash." << endl;
+        return;
     }
 
+    cout << "Do you have food containers? (Y/N)" << endl;
+    cout << "Examples: \n1. yogurt cup \n2. peanhut butter jar \n3. butter tub \n4. sour cream tub \n5. cream cheese tub \n";
+    cin >> input;
+    cout << endl;
+    if (input == "Y" || input == "y"){
+        cout << "These items ARE recyclable! Rinse out and put in recycling." << endl;
+        return;
+    }
+
+    cout << "Do you have to go containers? (Y/N)" << endl;
+    cin >> input;
+    cout << endl;
+    if (input == "Y" || input == "y"){
+        cout << "These items are SOMETIMES recyclable! Check with your local recycling center to see." << endl;
+        return;
+    }
+
+    cout << "Do you have food wrappers? (Y/N)" << endl;
+    cout << "Examples: \n1. gronola bar wrapper \n2. fruit snack wrapper \n3. chip bag \n4. squeeze apple sauce \n5. random snack bags \n";
+    cin >> input;
+    cout << endl;
+    if (input == "Y" || input == "y"){
+        cout << "These items are NOT recyclable! Throw them away in the trash." << endl;
+        return;
+    }
+            
+    cout << "You are holding recyclable plastic! Go ahead and recycle it." << endl;
+
+}
+
+void paper(){
+    string input; 
+
+    cout<<"Is your paper shredded (y/n)?\n";
+    cin>>input; 
+    cout<<endl;
+
+    if (input == "y"){
+        cout<<"Throw it away! Often there are pieces of plastic mixed in with shredded paper, preventing it from being processed. \n"; 
+        return; 
+    }
+
+    cout<<"Is your paper coated with plastic (y/n)?\n";
+    cin>>input; 
+    cout<<endl;
+
+    if (input == "y"){
+        cout<<"Throw it away! The paper cannot be separated easily from the plastic lining. \n"; 
+        return; 
+    }
+
+    cout<<"Is your paper a receipt (y/n)?\n";
+    cin>>input; 
+    cout<<endl;
+
+    if (input == "y"){
+        cout<<"Throw it away! Most receipts are made from a combination of plastic and paper, and they also contain a harmful chemical called bisphenol-A (BPA). \n"; 
+        return; 
+    }
+
+    cout<<"Is your paper contaminated with food or liquids (y/n)?\n";
+    cin>>input; 
+    cout<<endl;
+
+    if (input == "y"){
+        cout<<"Throw it away! It can't be processed for recycling.\n"; 
+        return; 
+    }
+
+    cout<<"Recycle your paper!\n";
 }
