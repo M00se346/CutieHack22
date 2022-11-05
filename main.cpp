@@ -116,7 +116,7 @@ void metal(){
     }
     else if (input == "N" || input == "n"){
         string electronicInput;
-        cout << "Cool, you is your waste some sort of electronic waste. Answer 'y' or 'n'" << endl;
+        cout << "Cool, is your waste some sort of electronic waste. Answer 'y' or 'n'" << endl;
         cin >> electronicInput;
 
         if (electronicInput == "Y" || electronicInput == "y"){ 
@@ -124,14 +124,14 @@ void metal(){
             if (electronicInput == "Y" || electronicInput == "y"){
                 cout << "This includes: Computer and Television Monitors, Computers, Printers, VCRs, Cell Phones, Radios, and Microwaves. "
                 << "These are recyclable and can be taken to a collection site." << endl;
-            }
-            else if (electronicInput == "N" || electronicInput == "n"){
+            }  
+        }
+        else if (electronicInput == "N" || electronicInput == "n"){
                 cout << "This includes: Batteries and Electrical cords. These are not recyclable, you are better off throwing them away." << endl;
             }
             else {
                 cout << "Invalid Input" << endl;
             }
-        }
     }
     else {
         cout << "Most metal objects are recyclable. If you have more questions, make sure to make sure to research where you can dispose your waste." 
