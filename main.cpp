@@ -5,7 +5,6 @@ using namespace std;
 
 
 void cardboard();
-
 void plastic();
 void metal();
 void liquid();
@@ -45,21 +44,27 @@ int main(){
             metal();
         }
         else if (userInput == "c"){
-            //call paper function
+            //paper();
         }
         else if (userInput == "d"){
-            //call glass funciton
+            //glass();
         }
         else if (userInput == "e"){
-            //call liquif function
+            liquid();
         }
         else if (userInput == "f"){
-            //idk
+            cout << "You are most likely holding trash. If it has any type"
+            << " of food residue or wax / plastic covering, please throw away in trash."
+            << endl;
+            cout << "If you are still unsure go to your local recycling center and ask for help."
+            << endl;
         }
 
 
     }
 
+
+    cout << "Any bit of recycling we can do helps the world, keep doing your part! Thanks for recyling responsibly." << endl;
 
     return 0;
 }
@@ -128,12 +133,12 @@ void cardboard(){
         cout << endl;
         if(input == "Y" || input == "y"){
             cout << "Great! You can recycle that. Make sure there"
-            << "is no wax coating or metal lining." << endl;
+            << "is no wax coating or metal lining (if there is, throw it away)." << endl;
         }
         else{
             cout << "Are you holding a pizza box?!?! "
             << "You are able to recycle pizza boxes ONLY IF they don't have grease on them. "
-            << "Otherwise, please recycle." << endl;
+            << "Otherwise, please throw away your item, it is not recyclable." << endl;
              
         }
     }
@@ -141,18 +146,55 @@ void cardboard(){
 }
 
 
-
+void liquid(){
+    cout << "While liquids are not typically recyclabe, you are able to "
+    << "take used oils/filters, and paint to a collection center." << endl;
+}
 
 void plastic(){
 
-    cout << "If you have empty plastic bottles, jugs, tubs, or jars, rince out with water and recycle!" << endl;
+    string input;
+
+    cout << "If you have empty plastic bottles, jugs, tubs, or jars, "
+    << "rinse out with water and recycle!" << endl;
 
     cout << "Don't have these things?" 
     << "Lets see... do you have empty house hold containers" 
     << "(clorox wipes bottle, laundry detergent jug etc... (Y/N)" << endl;
 
+    cin >> input;
+    cout << endl;
+
+    if (input == "Y" || input == "y"){
+        cout << "You can recycle this! Make sure to wash out any chemicals with water before recycling." << endl;
+    }
+    else{
+        cout << "Do you have a plastic bag in your hand?" << endl;
+        cin >> input;
+        cout << endl;
+
+        if (input == "Y" || input == "y"){
+            cout << "I recommend resuing plastic bags. These can be used when "
+            << "shopping so you don't have to buy new bags. Another use for plastic "
+            << "bags is to line the inside of trash cans. " << endl;
+            cout << "Otherwise, check your local recycling center to see if they accept plastic bags." << endl;
+            cout << endl << endl;
+            cout << "If you have a trash bag thats empty, check with your local recycling center. ";
+            cout << endl;
+        }   
+        else{
+            cout << "Do you have cling wrap? (Y/N)" << endl;
+            cin >> input;
+            cout << endl;
+            if (input == "Y" || input == "y"){
+                cout << "cling wrap is not recyclable, you should throw it in the trash." << endl;
+            }
+            else{
+                cout << "You are holding trash! Go ahead and throw it away." << endl;
+            }
+        }
 
 
-void liquid(){
-    cout << "While liquids are not typically recyclabe, you are able to take used oils/filters, and paint to a collection center." << endl;
+    }
+
 }
